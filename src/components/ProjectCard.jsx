@@ -14,7 +14,7 @@ export default function ProjectCard({ project }) {
           alt=""
           loading="lazy"
           decoding="async"
-          className="w-full max-w-[560px] object-contain transition duration-500 group-hover:scale-[1.03]"
+          className={`w-full object-contain transition ${project.coverClass ?? 'max-w-[560px]'} duration-500 group-hover:scale-[1.03]`}
         />
       </div>
       <div className="flex flex-col justify-between gap-8 p-6 md:p-12 xl:w-1/2">
@@ -23,7 +23,7 @@ export default function ProjectCard({ project }) {
             {project.period}
           </span>
           <div className="flex flex-col gap-4">
-            <h3 className="font-display text-2xl leading-[1.5] font-extrabold text-ink md:p-2.5 md:text-[40px]">
+            <h3 className="font-display text-2xl leading-[1.5] font-extrabold text-ink md:p-2.5 md:text-[32px]">
               {project.title.map((line) => (
                 <span key={line} className="block">
                   {line}

@@ -28,6 +28,7 @@ export const PROJECTS = [
       '透過拆解分析原本產品與競品分析後，將原本較不突出的視覺使用市場上較少且顯眼的配色，並將各大競品使用者已經習慣的相關操作流程導加入產品，業務反饋有提高客戶選擇使用的意願。',
     tags: ['APP改版', 'UI/UX Design'],
     cover: 'home/project-app.webp',
+    coverClass: 'max-w-[400px]',
     name: 'Mobile平台',
     subtitle: '風格改版及體驗優化',
     thumb: 'works/app.webp',
