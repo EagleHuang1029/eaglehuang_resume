@@ -5,7 +5,7 @@ import { asset } from '../lib/asset.js'
 export function WorkTile({ to, href, thumb, alt, name, subtitle, period }) {
   const body = (
     <>
-      <span className="block rounded-[29px] bg-white/35 p-4 transition-transform duration-300 group-hover:-translate-y-1 md:p-6">
+      <span className="glass block rounded-[29px] bg-white/35 p-4 transition-transform duration-300 group-hover:-translate-y-1 md:p-6">
         <span className="block overflow-hidden rounded-[15px] bg-linear-to-b from-[#7693a5] to-[#c8d9e5]">
           <img src={asset(thumb)} alt={alt} className="aspect-[552/443] w-full object-cover" loading="lazy" decoding="async" />
         </span>

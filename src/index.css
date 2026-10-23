@@ -46,12 +46,39 @@
   }
 }
 
-@utility card {
-  @apply rounded-3xl bg-panel;
+/* Glass, after the Figma "Glass" effect (light 0.8 from the top-left): a lit
+   top-left rim fading to a faint bottom-right one and a diagonal sheen over the
+   fill colour. No backdrop-filter: the aurora behind is already soft, and blurring
+   it again every frame halved the frame rate. */
+@utility glass {
+  border: 1px solid var(--glass-rim);
+  background-image: linear-gradient(135deg, var(--glass-sheen) 0%, transparent 42%, transparent 72%, var(--glass-sheen-end) 100%);
+  box-shadow:
+    inset 1.5px 1.5px 0 var(--glass-light),
+    inset -1px -1px 0 var(--glass-shade),
+    0 12px 32px -14px rgb(30 70 110 / 0.22);
 }
 
+@utility card {
+  @apply glass rounded-3xl bg-panel;
+}
+
+/* Small glass chips: same rim plus the design's soft inner highlight. */
 @utility tile {
-  @apply rounded-[20px] bg-tile shadow-[inset_2px_2px_4px_0_rgb(255_255_255/0.25)];
+  @apply glass rounded-[20px] bg-tile;
+  box-shadow:
+    inset 2px 2px 4px 0 rgb(255 255 255 / 0.25),
+    inset 1.5px 1.5px 0 var(--glass-light),
+    inset -1px -1px 0 var(--glass-shade),
+    0 8px 20px -12px rgb(30 70 110 / 0.2);
+}
+
+:root {
+  --glass-rim: rgb(255 255 255 / 0.45);
+  --glass-light: rgb(255 255 255 / 0.7);
+  --glass-shade: rgb(255 255 255 / 0.18);
+  --glass-sheen: rgb(255 255 255 / 0.3);
+  --glass-sheen-end: rgb(255 255 255 / 0.12);
 }
 
 /* 深色 toggle in the header swaps the palette by redefining the theme variables. */
@@ -64,6 +91,11 @@
   --color-tile: rgb(255 255 255 / 0.1);
   --color-heading: #8cc6ea;
   --color-line: #3c4a55;
+  --glass-rim: rgb(255 255 255 / 0.1);
+  --glass-light: rgb(255 255 255 / 0.18);
+  --glass-shade: rgb(255 255 255 / 0.04);
+  --glass-sheen: rgb(255 255 255 / 0.08);
+  --glass-sheen-end: rgb(255 255 255 / 0.03);
   color-scheme: dark;
 }
 

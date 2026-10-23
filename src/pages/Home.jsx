@@ -59,7 +59,7 @@ function Hero() {
 
 function Intro() {
   return (
-    <section className="mt-12 flex flex-col-reverse gap-8 overflow-hidden rounded-3xl bg-linear-to-b from-white/30 to-white/15 to-80% px-6 py-10 md:px-12 xl:mt-[61px] xl:h-[616px] xl:flex-row xl:justify-between xl:gap-[84px] xl:pt-[53px] xl:pr-[117px] xl:pl-[88px]">
+    <section className="mt-12 flex flex-col-reverse gap-8 overflow-hidden glass rounded-3xl bg-white/20 px-6 py-10 md:px-12 xl:mt-[61px] xl:h-[616px] xl:flex-row xl:justify-between xl:gap-[84px] xl:pt-[53px] xl:pr-[117px] xl:pl-[88px]">
       <div className="flex flex-col gap-3 xl:w-[691px]">
         <ScriptHeading bold="What make me" script="different" />
         <div className="space-y-8 font-body text-base leading-loose font-medium tracking-[2px] text-muted md:p-2.5 md:text-base">
@@ -78,7 +78,7 @@ function Intro() {
       <img
         src={asset('home/portrait.webp')}
         alt="Eagle 的插畫頭像"
-        className="mx-auto w-[180px] md:w-[220px] xl:mx-0 xl:-mb-10 xl:w-[240px] xl:self-end"
+        className="mx-auto w-[180px] md:w-[220px] xl:mx-0 xl:w-[240px] xl:self-center"
       />
     </section>
   )
