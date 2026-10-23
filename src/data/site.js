@@ -1,4 +1,4 @@
-export const CONTACT_EMAIL = 'jenny2320520@gmail.com'
+export const CONTACT_EMAIL = 'huangdiesel27@gmail.com'
 
 export const BEHANCE_URL = 'https://www.behance.net/huangdiese92be'
 

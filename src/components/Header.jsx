@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, NavLink } from 'react-router'
+import { Link, NavLink, useLocation } from 'react-router'
 import { asset } from '../lib/asset.js'
 import { useTheme } from '../lib/useTheme.js'
 import ContactButton from './ContactButton.jsx'
@@ -29,6 +29,24 @@ function ThemeToggle({ className = '' }) {
 
 export default function Header() {
   const [open, setOpen] = useState(false)
+  const { pathname } = useLocation()
+
+  // Case-study pages use the slim Figma header: only a 回首頁 pill.
+  if (pathname.startsWith('/projects/')) {
+    return (
+      <header className="sticky top-0 z-30 border border-white/50 bg-white/20 backdrop-blur-md dark:border-white/10 dark:bg-black/20">
+        <div className="mx-auto flex max-w-[1920px] items-center px-4 py-4 md:px-12 md:py-6">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 rounded-full bg-button px-5 py-2.5 font-black tracking-[0.32px] text-white transition hover:opacity-90"
+          >
+            <span aria-hidden className="text-xl leading-none">←</span>
+            回首頁
+          </Link>
+        </div>
+      </header>
+    )
+  }
 
   return (
     <header className="sticky top-0 z-30 border border-white/50 bg-white/20 backdrop-blur-md dark:border-white/10 dark:bg-black/20">

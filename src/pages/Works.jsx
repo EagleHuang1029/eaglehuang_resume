@@ -31,8 +31,8 @@ export default function Works() {
           name="My Behance"
           subtitle="觀看我的其他專案"
         />
-        {/* Fills the empty grid cell on tablet/desktop */}
-        <MascotBubble className="hidden md:flex" />
+        {/* Fills the empty grid cell on tablet/desktop; sits under the tiles on mobile */}
+        <MascotBubble className="flex" />
       </section>
     </>
   )
