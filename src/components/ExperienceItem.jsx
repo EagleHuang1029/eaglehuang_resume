@@ -5,7 +5,7 @@ function CompanyLogo({ job }) {
   return (
     <span className="flex size-14 shrink-0 items-center justify-center rounded-[20px] border-2 border-accent bg-white p-2.5 md:size-[72px]">
       {job.logo ? (
-        <img src={asset(job.logo)} alt="" className="max-h-full max-w-full rounded-[13px] object-contain" />
+        <img src={asset(job.logo)} alt="" loading="lazy" className="max-h-full max-w-full rounded-[13px] object-contain" />
       ) : (
         <span className="font-roboto text-2xl font-semibold text-[#2e4046] md:text-[32px]">{job.logoText}</span>
       )}

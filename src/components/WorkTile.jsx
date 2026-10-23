@@ -7,7 +7,7 @@ export function WorkTile({ to, href, thumb, alt, name, subtitle, period }) {
     <>
       <span className="block rounded-[29px] bg-white/20 p-4 transition-transform duration-300 group-hover:-translate-y-1 md:p-6">
         <span className="block overflow-hidden rounded-[15px] bg-linear-to-b from-[#7693a5] to-[#c8d9e5]">
-          <img src={asset(thumb)} alt={alt} className="aspect-[552/443] w-full object-cover" loading="lazy" />
+          <img src={asset(thumb)} alt={alt} className="aspect-[552/443] w-full object-cover" loading="lazy" decoding="async" />
         </span>
       </span>
       <span className="flex flex-col gap-4 md:gap-6">
@@ -43,7 +43,7 @@ export function MascotBubble({ className = '' }) {
           歡迎隨時聯繫我！
         </p>
       </div>
-      <img src={asset('works/mascot.png')} alt="Eagle 的插畫角色" className="w-[160px] md:w-[240px] xl:w-[318px]" loading="lazy" />
+      <img src={asset('works/mascot.webp')} alt="Eagle 的插畫角色" className="w-[160px] md:w-[240px] xl:w-[318px]" loading="lazy" />
     </div>
   )
 }

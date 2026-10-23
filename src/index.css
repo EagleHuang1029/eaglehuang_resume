@@ -67,7 +67,9 @@
   color-scheme: dark;
 }
 
-/* Aurora: soft colour blobs drifting behind the page, under the paper grain. */
+/* Aurora: wide ribbons of light sweeping slowly behind the page, under the paper grain.
+   Soft edges come from the gradients themselves (no blur filter), so each frame only
+   moves already-painted layers on the GPU. */
 .aurora {
   position: fixed;
   inset: 0;
@@ -78,68 +80,99 @@
 
 .aurora span {
   position: absolute;
-  width: 60vmax;
-  height: 60vmax;
-  border-radius: 9999px;
-  filter: blur(80px);
-  opacity: 0.45;
-  mix-blend-mode: multiply;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
   will-change: transform;
-  animation: aurora-drift 26s ease-in-out infinite alternate;
+  animation: aurora-sweep 22s ease-in-out infinite alternate;
 }
 
+/* A ring whose curved edge sweeps across the screen like a light band */
 .aurora span:nth-child(1) {
-  top: -25vmax;
-  left: -15vmax;
-  background: radial-gradient(circle, #4f9bd6 0%, transparent 65%);
+  width: 170vmax;
+  height: 120vmax;
+  margin: -60vmax 0 0 -85vmax;
+  background: radial-gradient(
+    closest-side,
+    transparent 70%,
+    rgb(79 155 214 / 0.38) 78%,
+    rgb(43 159 217 / 0.22) 88%,
+    transparent 100%
+  );
+  --from: translate3d(-30vw, 25vh, 0) rotate(-20deg);
+  --to: translate3d(25vw, -20vh, 0) rotate(35deg);
 }
 
 .aurora span:nth-child(2) {
-  top: 10vmax;
-  right: -25vmax;
-  background: radial-gradient(circle, #67ccff 0%, transparent 65%);
-  animation-duration: 32s;
-  animation-delay: -8s;
+  width: 140vmax;
+  height: 90vmax;
+  margin: -45vmax 0 0 -70vmax;
+  background: radial-gradient(
+    closest-side,
+    rgb(103 204 255 / 0.32) 0%,
+    rgb(103 204 255 / 0.18) 55%,
+    transparent 100%
+  );
+  animation-duration: 28s;
+  animation-delay: -10s;
+  --from: translate3d(35vw, -30vh, 0) rotate(15deg) scale(0.9);
+  --to: translate3d(-25vw, 20vh, 0) rotate(-25deg) scale(1.1);
 }
 
 .aurora span:nth-child(3) {
-  bottom: -30vmax;
-  left: 15vmax;
-  background: radial-gradient(circle, #9ec5f0 0%, transparent 65%);
-  animation-duration: 38s;
-  animation-delay: -16s;
-}
-
-.aurora span:nth-child(4) {
-  top: 20vmax;
-  left: 20vmax;
-  width: 40vmax;
-  height: 40vmax;
-  background: radial-gradient(circle, #b9a8f0 0%, transparent 65%);
-  opacity: 0.3;
-  animation-duration: 44s;
-  animation-delay: -4s;
+  width: 150vmax;
+  height: 100vmax;
+  margin: -50vmax 0 0 -75vmax;
+  background: radial-gradient(
+    closest-side,
+    transparent 62%,
+    rgb(145 128 240 / 0.24) 74%,
+    rgb(79 155 214 / 0.16) 86%,
+    transparent 100%
+  );
+  animation-duration: 34s;
+  animation-delay: -18s;
+  --from: translate3d(20vw, 35vh, 0) rotate(40deg);
+  --to: translate3d(-30vw, -25vh, 0) rotate(-10deg);
 }
 
 .dark .aurora span {
-  mix-blend-mode: screen;
-  opacity: 0.22;
+  opacity: 0.55;
 }
 
-@keyframes aurora-drift {
-  0% {
-    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+@keyframes aurora-sweep {
+  from {
+    transform: var(--from);
   }
-  50% {
-    transform: translate3d(12vw, 8vh, 0) scale(1.15) rotate(20deg);
+  to {
+    transform: var(--to);
   }
-  100% {
-    transform: translate3d(-8vw, 14vh, 0) scale(0.95) rotate(-15deg);
-  }
+}
+
+/* Scroll reveal: blocks rise and zoom in as they enter the viewport (see useReveal). */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 56px, 0) scale(0.92);
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .aurora span {
     animation: none;
+    transform: var(--from);
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

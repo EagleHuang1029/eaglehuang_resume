@@ -6,7 +6,7 @@ export const PROJECT_DETAILS = {
     titleMuted: 'Mobile平台 - ',
     title: '風格改版及體驗優化',
     tags: ['UI/UX Design', 'APP Design'],
-    hero: 'p-app/hero.png',
+    hero: 'p-app/hero.webp',
     info: [
       { label: '專案期間', lines: ['2025 / 10  ~  2026 / 05'] },
       { label: '專案團隊', lines: ['專案經理 *1', 'UIUX設計師 *1', '軟體工程師 *3 ( 前端、後端、APP )'] },
@@ -74,8 +74,8 @@ export const PROJECT_DETAILS = {
           },
         ],
         figures: [
-          { src: 'p-app/home-before.png', caption: 'Before', alt: '首頁改版前' },
-          { src: 'p-app/home-after.png', caption: 'After', alt: '首頁改版後' },
+          { src: 'p-app/home-before.webp', caption: 'Before', alt: '首頁改版前' },
+          { src: 'p-app/home-after.webp', caption: 'After', alt: '首頁改版後' },
         ],
       },
       {
@@ -97,8 +97,8 @@ export const PROJECT_DETAILS = {
           },
         ],
         figures: [
-          { src: 'p-app/games-before.png', caption: 'Before', alt: '遊戲選擇區塊改版前' },
-          { src: 'p-app/games-after.png', caption: 'After', alt: '遊戲選擇區塊改版後' },
+          { src: 'p-app/games-before.webp', caption: 'Before', alt: '遊戲選擇區塊改版前' },
+          { src: 'p-app/games-after.webp', caption: 'After', alt: '遊戲選擇區塊改版後' },
         ],
       },
       {
@@ -119,18 +119,18 @@ export const PROJECT_DETAILS = {
             wide: true,
           },
         ],
-        figure: { src: 'p-app/account-flow.png', alt: '帳戶中心改版前後對照' },
+        figure: { src: 'p-app/account-flow.webp', alt: '帳戶中心改版前後對照' },
       },
       {
         type: 'designSystem',
         title: '設計系統',
         images: [
-          { src: 'p-app/design-type.png', alt: '字體樣式' },
-          { src: 'p-app/design-color.png', alt: '顏色系統' },
-          { src: 'p-app/design-components.png', alt: '元件樣式' },
+          { src: 'p-app/design-type.webp', alt: '字體樣式' },
+          { src: 'p-app/design-color.webp', alt: '顏色系統' },
+          { src: 'p-app/design-components.webp', alt: '元件樣式' },
         ],
       },
-      { type: 'figure', title: 'User Flow ( EX：Profile Flow)', src: 'p-app/user-flow.png', alt: 'Profile 使用流程圖' },
+      { type: 'figure', title: 'User Flow ( EX：Profile Flow)', src: 'p-app/user-flow.webp', alt: 'Profile 使用流程圖' },
       {
         type: 'panel',
         heading: '改版及優化內部反饋',
@@ -160,7 +160,7 @@ export const PROJECT_DETAILS = {
     titleMuted: '娛樂平台網站 - ',
     title: '風格改版及體驗優化',
     tags: ['網站改版', 'UI/UX Design'],
-    hero: 'p-web/hero.png',
+    hero: 'p-web/hero.webp',
     info: [
       { label: '專案期間', lines: ['2023 / 03  ~  2024 / 01'] },
       { label: '專案團隊', lines: ['專案經理 *1', 'UIUX設計師 *1', '軟體工程師 *3 ( 前端、後端、APP )'] },
@@ -206,17 +206,17 @@ export const PROJECT_DETAILS = {
       {
         type: 'gallery',
         images: [
-          { src: 'p-web/style-before.png', alt: '網站改版前（Before）' },
-          { src: 'p-web/style-after.png', alt: '網站改版後（After）' },
+          { src: 'p-web/style-before.webp', alt: '網站改版前（Before）' },
+          { src: 'p-web/style-after.webp', alt: '網站改版後（After）' },
         ],
       },
       {
         type: 'designSystem',
         heading: '設計系統',
         images: [
-          { src: 'p-web/design-type.png', alt: '字體樣式' },
-          { src: 'p-web/design-color.png', alt: '顏色系統' },
-          { src: 'p-web/design-components.png', alt: '元件樣式' },
+          { src: 'p-web/design-type.webp', alt: '字體樣式' },
+          { src: 'p-web/design-color.webp', alt: '顏色系統' },
+          { src: 'p-web/design-components.webp', alt: '元件樣式' },
         ],
       },
       {
@@ -252,7 +252,7 @@ export const PROJECT_DETAILS = {
           { title: '新流程', start: ['其他頁面', '首頁'], steps: ['交易流程'] },
         ],
       },
-      { type: 'figure', src: 'p-web/banner.png', alt: '每個頁面右下角都會有懸浮交易按鈕' },
+      { type: 'figure', src: 'p-web/banner.webp', alt: '每個頁面右下角都會有懸浮交易按鈕' },
       {
         type: 'feature',
         items: [
@@ -266,7 +266,7 @@ export const PROJECT_DETAILS = {
             body: '原本的儲值與提領是以不同的分頁下去執行流程，但將兩者結合在一個彈窗功能內提高便利性，也可減少使用者的學習成本，不用頁面跑來跑去。',
           },
         ],
-        figures: [{ src: 'p-web/trade-screens.png', alt: '懸浮交易按鈕與交易彈窗畫面', wide: true }],
+        figures: [{ src: 'p-web/trade-screens.webp', alt: '懸浮交易按鈕與交易彈窗畫面', wide: true }],
       },
       {
         type: 'panel',
