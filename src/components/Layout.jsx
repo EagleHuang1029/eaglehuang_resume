@@ -6,6 +6,12 @@ import Header from './Header.jsx'
 export default function Layout() {
   return (
     <div className="relative min-h-dvh overflow-x-clip">
+      <div aria-hidden className="aurora">
+        <span />
+        <span />
+        <span />
+        <span />
+      </div>
       {/* Paper-grain texture from the Figma background */}
       <div
         aria-hidden
