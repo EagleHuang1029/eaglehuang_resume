@@ -129,7 +129,7 @@ function FigureBlock({ title, src, alt }) {
 
 function GalleryBlock({ images }) {
   return (
-    <section className="grid gap-6 md:grid-cols-2 min-[1440px]:-mx-[54px]">
+    <section className="grid gap-6 md:grid-cols-2">
       {images.map((img) => (
         <Figure key={img.src} {...img} />
       ))}
