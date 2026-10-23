@@ -56,7 +56,7 @@ function Intro() {
         </div>
 
         <img
-          src={asset('about/portrait.png')}
+          src={asset('about/portrait.webp')}
           alt="Eagle 的照片"
           className="mx-auto w-[220px] md:w-[300px] xl:mx-0 xl:w-[376px]"
         />
@@ -117,7 +117,7 @@ function Certifications() {
                 <p key={p}>{p}</p>
               ))}
             </div>
-            <img src={asset(c.image)} alt={`${c.title} 證書`} className={`w-full object-cover ${c.aspect}`} loading="lazy" />
+            <img src={asset(c.image)} alt={`${c.title} 證書`} className={`w-full object-cover ${c.aspect}`} loading="lazy" decoding="async" />
           </article>
         ))}
       </div>

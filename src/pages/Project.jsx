@@ -73,7 +73,7 @@ function OtherProjects({ current }) {
         ))}
         <WorkTile
           href={BEHANCE_URL}
-          thumb="works/behance.png"
+          thumb="works/behance.webp"
           alt="Behance 作品集預覽"
           name="My Behance"
           subtitle="觀看我其他的專案"
@@ -97,6 +97,7 @@ export default function Project() {
         <img
           src={asset(project.hero)}
           alt={`${project.titleMuted}${project.title} 主視覺`}
+          fetchPriority="high"
           className="mt-8 w-full rounded-3xl xl:relative xl:left-1/2 xl:mt-8 xl:w-[min(1760px,calc(100vw-48px))] xl:max-w-none xl:-translate-x-1/2"
         />
         <ProjectInfo info={project.info} />

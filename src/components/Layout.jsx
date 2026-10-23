@@ -1,13 +1,17 @@
+import { useRef } from 'react'
 import { Outlet, ScrollRestoration } from 'react-router'
 import { asset } from '../lib/asset.js'
+import { useReveal } from '../lib/useReveal.js'
 import Footer from './Footer.jsx'
 import Header from './Header.jsx'
 
 export default function Layout() {
+  const rootRef = useRef(null)
+  useReveal(rootRef)
+
   return (
-    <div className="relative min-h-dvh overflow-x-clip">
+    <div ref={rootRef} className="relative min-h-dvh overflow-x-clip">
       <div aria-hidden className="aurora">
-        <span />
         <span />
         <span />
         <span />

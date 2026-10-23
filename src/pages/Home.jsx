@@ -76,7 +76,7 @@ function Intro() {
         </div>
       </div>
       <img
-        src={asset('home/portrait.png')}
+        src={asset('home/portrait.webp')}
         alt="Eagle 的插畫頭像"
         className="mx-auto w-[220px] md:w-[280px] xl:mx-0 xl:mt-[90px] xl:w-[336px] xl:self-start"
       />

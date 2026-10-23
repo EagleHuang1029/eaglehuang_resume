@@ -85,5 +85,5 @@ Figma file `Cn8kunj18UdvHfitsibbuY` (page Resume_web) and save it at the path be
 | p-web/banner.png | 273:547 | |
 | p-web/trade-screens.png | 273:6526 | |
 
-Export PNGs at 2x. After adding everything, check every route at 1920 / 810 / 390 against the
+Export PNGs at 2x. Images over 30 KB are then converted to WebP (quality 82, max 2400 px wide) and the code points at the .webp file. After adding everything, check every route at 1920 / 810 / 390 against the
 Figma frames (tablet and mobile copies sit below each PC frame).

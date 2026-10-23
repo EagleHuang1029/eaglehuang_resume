@@ -12,6 +12,8 @@ export default function ProjectCard({ project }) {
         <img
           src={asset(project.cover)}
           alt=""
+          loading="lazy"
+          decoding="async"
           className="w-full max-w-[560px] object-contain transition duration-500 group-hover:scale-[1.03]"
         />
       </div>

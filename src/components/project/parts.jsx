@@ -53,7 +53,7 @@ export function Panel({ children, className = '' }) {
 export function Figure({ src, alt, caption, className = '' }) {
   return (
     <figure className={`flex flex-col items-center gap-4 ${className}`}>
-      <img src={asset(src)} alt={alt} className="w-full" loading="lazy" />
+      <img src={asset(src)} alt={alt} className="w-full" loading="lazy" decoding="async" />
       {caption && <figcaption className="font-body text-2xl font-bold text-heading md:text-[32px]">{caption}</figcaption>}
     </figure>
   )

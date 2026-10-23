@@ -26,7 +26,7 @@ export default function Works() {
         ))}
         <WorkTile
           href={BEHANCE_URL}
-          thumb="works/behance.png"
+          thumb="works/behance.webp"
           alt="Behance 作品集預覽"
           name="My Behance"
           subtitle="觀看我的其他專案"
