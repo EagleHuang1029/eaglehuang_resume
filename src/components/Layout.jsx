@@ -1,12 +1,19 @@
 import { Outlet, ScrollRestoration } from 'react-router'
+import { asset } from '../lib/asset.js'
 import Footer from './Footer.jsx'
 import Header from './Header.jsx'
 
 export default function Layout() {
   return (
-    <div className="min-h-dvh">
+    <div className="relative min-h-dvh overflow-x-clip">
+      {/* Paper-grain texture from the Figma background */}
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-0 -z-10 bg-size-[128px_128px] mix-blend-overlay"
+        style={{ backgroundImage: `url("${asset('bg-noise.png')}")` }}
+      />
       <Header />
-      <main className="mx-auto w-full max-w-[1316px] px-4 md:px-8">
+      <main className="mx-auto w-full max-w-[1316px] px-4 md:px-8 xl:px-0">
         <Outlet />
       </main>
       <Footer />
