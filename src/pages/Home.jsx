@@ -10,23 +10,23 @@ const FOCUS = ['UI/UX Design', 'Product Thinking', 'Front-end Awareness', 'Proto
 
 function Hero() {
   return (
-    <section className="flex flex-wrap items-end justify-center gap-10 pt-10 md:pt-16 xl:gap-[70px] xl:pt-[104px]">
-      <div className="flex w-full flex-col gap-8 xl:w-[1049px] xl:gap-12">
+    <section className="flex flex-wrap items-end justify-center gap-10 pt-10 md:pt-16 xl:flex-nowrap xl:justify-between xl:gap-12 xl:pt-[104px]">
+      <div className="flex w-full flex-col gap-8 xl:w-auto xl:gap-10">
         <h1 className="flex flex-col gap-4 text-ink xl:gap-6">
           <span className="flex items-center gap-4 xl:gap-6">
-            <span className="text-[28px] font-bold tracking-[1.28px] opacity-40 md:text-5xl xl:text-[64px]">嗨 ! 我是</span>
-            <span className="font-display text-4xl font-extrabold md:text-6xl xl:text-[80px]">Eagle</span>
+            <span className="text-[28px] font-bold tracking-[1.28px] opacity-40 md:text-5xl xl:text-[52px]">嗨 ! 我是</span>
+            <span className="font-display text-4xl font-extrabold md:text-6xl xl:text-[64px]">Eagle</span>
           </span>
           <span className="flex flex-col-reverse items-start gap-3 md:flex-row md:items-center md:gap-6">
             <span className="inline-flex items-center gap-4 rounded-full bg-chip px-5 py-2 md:w-[232px] md:justify-center md:px-8 md:py-4">
               <img src={asset('icons/verify.svg')} alt="" className="size-6 md:size-8" />
               <span className="text-base font-bold tracking-[0.48px] md:text-2xl">5 年經驗</span>
             </span>
-            <span className="font-display text-4xl font-extrabold md:text-6xl xl:text-[80px]">UI UX Designer</span>
+            <span className="font-display text-4xl font-extrabold md:text-6xl xl:text-[64px]">UI UX Designer</span>
           </span>
         </h1>
 
-        <p className="flex flex-col items-start gap-x-3 font-display text-[32px] leading-[1.3] font-extrabold text-ink md:flex-row md:items-center md:text-5xl xl:text-[72px]">
+        <p className="flex flex-col items-start gap-x-3 font-display text-[32px] leading-[1.3] font-extrabold text-ink md:flex-row md:items-center md:text-5xl xl:text-[56px]">
           <span>簡單留給使用者</span>
           <span className="hidden rounded-full bg-chip md:order-none md:block md:p-4" aria-hidden>
             <img src={asset('icons/lamp.svg')} alt="" className="size-6 md:size-8" />
@@ -43,7 +43,7 @@ function Hero() {
         </ul>
       </div>
 
-      <div className="hidden items-center gap-2 text-accent xl:flex">
+      <div className="hidden shrink-0 items-center gap-2 text-accent xl:flex">
         <img src={asset('home/feather-arrow.svg')} alt="" className="h-[108px] w-[72px]" />
         <span className="font-semibold">
           Scroll down
@@ -62,7 +62,7 @@ function Intro() {
     <section className="mt-12 flex flex-col-reverse gap-8 overflow-hidden rounded-3xl bg-linear-to-b from-white/30 to-white/15 to-80% px-6 py-10 md:px-12 xl:mt-[61px] xl:h-[616px] xl:flex-row xl:justify-between xl:gap-[84px] xl:pt-[53px] xl:pr-[117px] xl:pl-[88px]">
       <div className="flex flex-col gap-3 xl:w-[691px]">
         <ScriptHeading bold="What make me" script="different" />
-        <div className="space-y-8 font-body text-base leading-loose font-medium tracking-[2px] text-muted md:p-2.5 md:text-xl">
+        <div className="space-y-8 font-body text-base leading-loose font-medium tracking-[2px] text-muted md:p-2.5 md:text-base">
           <p>
             我習慣在開始設計之前，先問一句：「為什麼要做這件事？」
             <br />

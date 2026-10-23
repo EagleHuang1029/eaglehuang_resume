@@ -8,7 +8,7 @@ export function AboutProject({ about }) {
         <div className="flex flex-col gap-6">
           <Panel>
             <IconTitle icon="target">目標</IconTitle>
-            <ol className="list-decimal ps-[30px] font-body text-base leading-loose tracking-[2px] text-muted md:ps-[70px] md:text-xl">
+            <ol className="list-decimal ps-[30px] font-body text-base leading-loose tracking-[2px] text-muted md:ps-[70px] md:text-base">
               {about.goals.map((g) => (
                 <li key={g}>{g}</li>
               ))}
@@ -66,7 +66,7 @@ function FeatureBlock({ title, items, figures, reverse }) {
       {items.map((it) => (
         <div key={it.title} className="font-body tracking-[2px]">
           <h3 className="text-xl leading-loose font-bold text-heading md:text-2xl">{it.title}</h3>
-          <p className="text-base leading-loose text-muted md:text-xl">{it.body}</p>
+          <p className="text-base leading-loose text-muted md:text-base">{it.body}</p>
         </div>
       ))}
     </div>
@@ -179,7 +179,7 @@ function StatsBlock({ icon, title, items }) {
       <dl className="grid grid-cols-2 gap-6 md:pl-10 xl:grid-cols-4">
         {items.map((s) => (
           <div key={s.label} className="flex flex-col-reverse gap-1 font-body">
-            <dt className="text-base tracking-[2px] text-muted md:text-xl">{s.label}</dt>
+            <dt className="text-base tracking-[2px] text-muted md:text-base">{s.label}</dt>
             <dd className="font-display text-4xl font-extrabold text-accent md:text-5xl">{s.value}</dd>
           </div>
         ))}

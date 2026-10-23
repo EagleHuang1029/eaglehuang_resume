@@ -62,11 +62,105 @@ export const EXPERIENCE = [
       },
     ],
   },
-  { company: '塶樂為創有限公司', role: 'UI / UX Designer', period: '2021 - 2025', logo: 'about/logo-tangle.png' },
-  { company: '誌彙科技有限公司', role: 'UI Designer', period: '2018 - 2021', logo: 'about/logo-zhihui.png' },
-  { company: '米洛科技有限公司', role: '網頁設計助理', period: '2017 - 2018', logo: 'about/logo-milo.png' },
-  { company: '卡貓科技有限公司 ( 結束營運 )', role: '梅樹設計兼企劃助理', period: '2016 - 2017', logoText: '貓' },
-  { company: '九玖雲端有限公司 ( 結束營運 )', role: '網頁美術設計', period: '2015 - 2016', logo: 'about/logo-jiujiu.png' },
+  {
+    company: '塶樂為創有限公司',
+    role: 'UI / UX Designer',
+    period: '2021 - 2025',
+    logo: 'about/logo-tangle.png',
+    details: [
+      {
+        heading: '網站平台 UI / UX',
+        points: [
+          '與 PM 對接產品需求，梳理功能架構並製作 Function Map。',
+          '規劃各功能操作流程，建立 Flow Chart、UI Flow 與 Wireframe。',
+          '將 Wireframe 延伸為 High-Fidelity Mockup，完成介面視覺與互動設計。',
+          '使用瀏覽器開發者工具進行切版校稿，確認網頁呈現與 RWD 響應式效果。',
+        ],
+      },
+      {
+        heading: '遊戲 UI 設計',
+        points: [
+          '規劃與設計遊戲介面及遊戲內各項 UI 元件。',
+          '製作平台行銷活動所需的 Banner 與相關視覺素材。',
+          '配合遊戲需求進行介面調整與視覺設計。',
+        ],
+      },
+      {
+        heading: '前端協作與開發溝通',
+        points: [
+          '具備 HTML、CSS 與基礎 JavaScript 能力，可透過開發者工具理解網頁結構與實作方式。',
+          '協助設計團隊與 RD 溝通設計細節，降低設計與開發之間的理解落差。',
+          '設計前會先了解專案使用的前端框架／元件庫及其 Guidelines，讓設計盡量符合既有元件規範，降低後續開發成本並提升團隊協作效率。',
+        ],
+      },
+    ],
+  },
+  {
+    company: '誌彙科技有限公司',
+    role: 'UI Designer',
+    period: '2018 - 2021',
+    logo: 'about/logo-zhihui.png',
+    details: [
+      {
+        points: [
+          '負責網站與數位介面規劃，依據客戶需求進行需求釐清、資訊架構規劃、Wireframe 繪製與 Mockup 視覺設計，將需求轉化為具體介面方案。',
+          '參與網站前端實作，使用 HTML、CSS 進行切版與 RWD 響應式設計，並搭配 jQuery 製作基礎互動效果，具備設計落地與前端實作概念。',
+          '使用 WordPress 進行網站建置、介面視覺調整與內容維護，並依實際營運需求持續進行網站更新與版面優化。',
+          '與企劃、設計及程式開發人員協作執行專案，協助需求溝通、功能確認與設計調整，確保設計方案與實際開發需求順利銜接。',
+          '支援品牌與行銷相關視覺設計，包含品牌識別、網站改版、活動 Banner、數位廣告與行銷素材製作，累積跨平台視覺設計經驗。',
+        ],
+      },
+    ],
+  },
+  {
+    company: '米洛科技有限公司',
+    role: '網頁設計助理',
+    period: '2017 - 2018',
+    logo: 'about/logo-milo.png',
+    details: [
+      {
+        points: [
+          '協助網站頁面規劃與客戶提案，依需求製作網站 Mockup 與版型設計。',
+          '使用公司自行開發的網站編輯系統進行網頁製作，並運用 HTML、CSS 及 Bootstrap 完成頁面切版與樣式調整。',
+          '執行 RWD 響應式網頁製作，並針對不同裝置與瀏覽器進行 CSS 相容性與版面調整。',
+          '協助網站日常維護與問題排除，處理客戶內容編輯後產生的版面異常、跑版等問題。',
+        ],
+      },
+    ],
+  },
+  {
+    company: '卡貓科技有限公司 ( 結束營運 )',
+    role: '梅樹設計兼企劃助理',
+    period: '2016 - 2017',
+    logoText: '貓',
+    details: [
+      {
+        points: [
+          '參與卡牌類遊戲 UI 介面提案與設計，配合遊戲企劃需求進行介面版型、視覺元素與相關素材製作。',
+          '負責公司官網整體視覺設計，包含 Logo、Banner、Icon 等網站相關素材製作。',
+          '執行影像後製與美編作業，包含素材合成、去背、修圖及其他影像處理。',
+          '協助企劃主管整理與撰寫產品規格文件，配合專案需求進行內容彙整與製作。',
+        ],
+      },
+    ],
+  },
+  {
+    company: '九玖雲端有限公司 ( 結束營運 )',
+    role: '網頁美術設計',
+    period: '2015 - 2016',
+    logo: 'about/logo-jiujiu.png',
+    details: [
+      {
+        points: [
+          '負責遊戲活動 Banner、EDM、GIF 及站外宣傳素材設計。',
+          '執行遊戲活動獨立頁面設計與版面規劃。',
+          '負責遊戲平台 UI 改版與視覺調整，配合營運需求進行介面更新。',
+          '協助公司內部環境與臨時需求之美術素材製作。',
+          '與企劃、程式開發等相關人員協作執行專案。',
+        ],
+      },
+    ],
+  },
 ]
 
 export const CERTIFICATIONS = [
