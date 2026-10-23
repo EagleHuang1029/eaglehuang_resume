@@ -47,7 +47,7 @@ function Intro() {
 
           <a
             href={`${import.meta.env.BASE_URL}${INTRO.resumeHref}`}
-            download
+            download="黃育淇_Eagle_Huang_履歷.pdf"
             className="flex items-center gap-4 rounded-full bg-button px-6 py-4 text-base font-medium tracking-[1.28px] text-[#e7eff6] transition-opacity hover:opacity-90"
           >
             下載履歷
