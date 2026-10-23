@@ -14,6 +14,9 @@
   --color-chip: rgb(79 155 214 / 0.3);
   --color-panel: rgb(255 255 255 / 0.15);
   --color-tile: rgb(255 255 255 / 0.5);
+  --color-heading: #205777;
+  --color-line: #b6c3c9;
+  --color-ai: rgb(103 204 255 / 0.3);
 
   --font-sans: 'Noto Sans TC', system-ui, sans-serif;
   --font-display: 'Bricolage Grotesque', 'Noto Sans TC', sans-serif;
@@ -59,5 +62,7 @@
   --color-muted: #a9b6bf;
   --color-panel: rgb(255 255 255 / 0.06);
   --color-tile: rgb(255 255 255 / 0.1);
+  --color-heading: #8cc6ea;
+  --color-line: #3c4a55;
   color-scheme: dark;
 }
