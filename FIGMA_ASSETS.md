@@ -56,3 +56,34 @@ Figma file `Cn8kunj18UdvHfitsibbuY` (page Resume_web) and save it at the path be
 | works/behance.png | 564:8924 | export the whole collage frame |
 | works/bubble.svg | 564:8886 | speech bubble shape only (text is live) |
 | works/mascot.png | 564:8884 | |
+
+## 專案頁 (專案一 279:6578 = /projects/app, 專案二 233:3480 = /projects/web)
+
+| Path | Figma node | Notes |
+|---|---|---|
+| icons/link.svg | 357:3763 | |
+| icons/blue-target.svg | 279:6642 | |
+| icons/blue-fire.svg | 279:6648 | |
+| icons/blue-solve.svg | 279:6656 | |
+| icons/blue-feather.svg | 279:6671 | |
+| p-app/hero.png | 279:6616 | 1760 wide |
+| p-app/home-before.png | 313:9044 | |
+| p-app/home-after.png | 313:9171 | |
+| p-app/games-before.png | 301:2206 | |
+| p-app/games-after.png | 301:2332 | |
+| p-app/account-flow.png | 368:8794 | |
+| p-app/design-type.png | 279:6678 | |
+| p-app/design-color.png | 279:6698 | |
+| p-app/design-components.png | 279:6727 | |
+| p-app/user-flow.png | 368:14681 | |
+| p-web/hero.png | 233:3518 | 1760 wide |
+| p-web/style-before.png | 233:3626 | |
+| p-web/style-after.png | 233:3612 | |
+| p-web/design-type.png | 233:3676 | |
+| p-web/design-color.png | 235:3711 | |
+| p-web/design-components.png | 255:311 | |
+| p-web/banner.png | 273:547 | |
+| p-web/trade-screens.png | 273:6526 | |
+
+Export PNGs at 2x. After adding everything, check every route at 1920 / 810 / 390 against the
+Figma frames (tablet and mobile copies sit below each PC frame).

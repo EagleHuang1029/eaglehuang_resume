@@ -1,7 +1,9 @@
 export const CONTACT_EMAIL = 'jenny2320520@gmail.com'
 
+export const BEHANCE_URL = 'https://www.behance.net/huangdiese92be'
+
 export const SOCIAL_LINKS = [
-  { label: 'Behance', href: 'https://www.behance.net/huangdiese92be', icon: 'icons/behance.svg' },
+  { label: 'Behance', href: BEHANCE_URL, icon: 'icons/behance.svg' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/huangyuci', icon: 'icons/linkedin.svg' },
 ]
 

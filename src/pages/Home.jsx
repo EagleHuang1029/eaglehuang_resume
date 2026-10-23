@@ -104,7 +104,7 @@ export default function Home() {
       <Intro />
       <SelectedWorks />
       {/* The 關於我 block is wider (1840px) than the main column on desktop */}
-      <section className="mt-16 xl:relative xl:left-1/2 xl:mt-[189px] xl:w-[1840px] xl:-translate-x-1/2">
+      <section className="mt-16 xl:relative xl:left-1/2 xl:mt-[189px] xl:w-[min(1840px,calc(100vw-48px))] xl:-translate-x-1/2">
         <BraceHeading className="mb-6 xl:mb-0 xl:p-2.5">關於我</BraceHeading>
         <AboutCards />
       </section>
