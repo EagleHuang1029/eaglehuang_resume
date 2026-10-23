@@ -47,7 +47,7 @@ export function TextItem({ title, body, large = false, titleClass = 'text-headin
 }
 
 export function Panel({ children, className = '' }) {
-  return <div className={`flex flex-col gap-4 rounded-3xl bg-white/35 px-5 py-8 md:px-8 md:py-10 ${className}`}>{children}</div>
+  return <div className={`flex flex-col gap-4 glass rounded-3xl bg-white/35 px-5 py-8 md:px-8 md:py-10 ${className}`}>{children}</div>
 }
 
 export function Figure({ src, alt, caption, className = '' }) {
