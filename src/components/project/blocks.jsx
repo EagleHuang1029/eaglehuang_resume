@@ -23,7 +23,7 @@ export function AboutProject({ about }) {
             </div>
           </Panel>
         </div>
-        <Panel className="bg-[#f8fcff]/75 dark:bg-white/10">
+        <Panel className="bg-[#f8fcff]/90 dark:bg-white/10">
           <IconTitle icon="solve">解決方案</IconTitle>
           <div className="flex flex-col gap-2 md:pr-3 md:pl-10">
             {about.solutions.map((s) => (
@@ -139,7 +139,7 @@ function GalleryBlock({ images }) {
 
 function FlowNode({ children }) {
   return (
-    <span className="flex min-h-[72px] items-center justify-center rounded-2xl bg-white/50 px-6 py-3 text-center font-display text-lg font-bold text-ink shadow-[inset_2px_2px_4px_0_rgb(255_255_255/0.25)] md:min-h-[104px] md:text-2xl dark:bg-white/10">
+    <span className="flex min-h-[72px] items-center justify-center rounded-2xl bg-white/65 px-6 py-3 text-center font-display text-lg font-bold text-ink shadow-[inset_2px_2px_4px_0_rgb(255_255_255/0.25)] md:min-h-[104px] md:text-2xl dark:bg-white/10">
       {children}
     </span>
   )
@@ -174,7 +174,7 @@ function FlowBlock({ flows }) {
 
 function StatsBlock({ icon, title, items }) {
   return (
-    <Panel className="gap-6 bg-[#f8fcff]/75 dark:bg-white/10">
+    <Panel className="gap-6 bg-[#f8fcff]/90 dark:bg-white/10">
       <IconTitle icon={icon}>{title}</IconTitle>
       <dl className="grid grid-cols-2 gap-6 md:pl-10 xl:grid-cols-4">
         {items.map((s) => (

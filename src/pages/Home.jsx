@@ -28,7 +28,7 @@ function Hero() {
 
         <p className="flex flex-col items-start gap-x-3 font-display text-[32px] leading-[1.3] font-extrabold text-ink md:flex-row md:items-center md:text-5xl xl:text-[72px]">
           <span>簡單留給使用者</span>
-          <span className="order-first rounded-full bg-chip p-3 md:order-none md:p-4" aria-hidden>
+          <span className="hidden rounded-full bg-chip md:order-none md:block md:p-4" aria-hidden>
             <img src={asset('icons/lamp.svg')} alt="" className="size-6 md:size-8" />
           </span>
           <span>複雜留給思考</span>
@@ -59,7 +59,7 @@ function Hero() {
 
 function Intro() {
   return (
-    <section className="mt-12 flex flex-col-reverse gap-8 overflow-hidden rounded-3xl bg-linear-to-b from-white/15 to-white/0 to-80% px-6 py-10 md:px-12 xl:mt-[61px] xl:h-[616px] xl:flex-row xl:justify-between xl:gap-[84px] xl:pt-[53px] xl:pr-[117px] xl:pl-[88px]">
+    <section className="mt-12 flex flex-col-reverse gap-8 overflow-hidden rounded-3xl bg-linear-to-b from-white/30 to-white/15 to-80% px-6 py-10 md:px-12 xl:mt-[61px] xl:h-[616px] xl:flex-row xl:justify-between xl:gap-[84px] xl:pt-[53px] xl:pr-[117px] xl:pl-[88px]">
       <div className="flex flex-col gap-3 xl:w-[691px]">
         <ScriptHeading bold="What make me" script="different" />
         <div className="space-y-8 font-body text-base leading-loose font-medium tracking-[2px] text-muted md:p-2.5 md:text-xl">

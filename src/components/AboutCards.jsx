@@ -87,7 +87,7 @@ function Achievement() {
         href={ACHIEVEMENT.href}
         target="_blank"
         rel="noreferrer"
-        className="tile flex items-center gap-5 p-5 transition hover:bg-white/70 md:max-w-[764px] md:py-[22px] md:pr-[34px] md:pl-[22px]"
+        className="tile flex items-center gap-5 p-5 transition hover:bg-white/85 md:max-w-[764px] md:py-[22px] md:pr-[34px] md:pl-[22px]"
       >
         <img src={asset(ACHIEVEMENT.logo)} alt="" loading="lazy" className="size-14 shrink-0 rounded-2xl object-cover md:size-[72px]" />
         <span className="flex min-w-0 flex-1 flex-col gap-2 md:gap-3">
