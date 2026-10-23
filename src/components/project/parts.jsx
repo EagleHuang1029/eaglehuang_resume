@@ -35,7 +35,7 @@ export function IconTitle({ icon, children }) {
 // A bold-titled paragraph; `body` may be a string or several paragraphs.
 export function TextItem({ title, body, large = false, titleClass = 'text-heading' }) {
   const paragraphs = Array.isArray(body) ? body : [body]
-  const size = large ? 'text-lg md:text-2xl' : 'text-base md:text-xl'
+  const size = large ? 'text-lg md:text-2xl' : 'text-base md:text-base'
   return (
     <div className={`font-body leading-loose tracking-[2px] text-muted ${size}`}>
       <p className={`font-bold ${titleClass}`}>{title}</p>

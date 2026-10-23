@@ -16,7 +16,7 @@ function Intro() {
 
       <div className="flex flex-col-reverse gap-8 xl:flex-row xl:items-start xl:justify-between">
         <div className="flex flex-col items-start gap-6 xl:w-[792px]">
-          <div className="space-y-4 py-2 font-body text-base leading-loose font-medium tracking-[2px] text-muted md:text-xl">
+          <div className="space-y-4 py-2 font-body text-base leading-loose font-medium tracking-[2px] text-muted md:text-base">
             {INTRO.paragraphs.map((p) => (
               <p key={p}>{p}</p>
             ))}
@@ -70,7 +70,7 @@ function AiDesign() {
     <section className="flex flex-col gap-10 py-16 md:px-8 xl:gap-20 xl:py-20">
       <div className="flex flex-col gap-6">
         <BraceHeading>AI × Design</BraceHeading>
-        <p className="font-body text-base leading-loose font-medium tracking-[2px] text-muted md:text-xl xl:w-[964px]">
+        <p className="font-body text-base leading-loose font-medium tracking-[2px] text-muted md:text-base xl:w-[964px]">
           {AI_DESIGN.lead}
         </p>
       </div>
@@ -82,7 +82,7 @@ function AiDesign() {
             </span>
             <div className="flex max-w-[580px] flex-col gap-1 tracking-[2px]">
               <h3 className="font-body text-xl leading-loose font-bold text-heading md:text-2xl">{item.title}</h3>
-              <p className="font-body text-base leading-loose text-muted md:text-xl">{item.body}</p>
+              <p className="font-body text-base leading-loose text-muted md:text-base">{item.body}</p>
             </div>
           </li>
         ))}
@@ -111,8 +111,8 @@ function Certifications() {
       <div className="flex flex-col gap-16 rounded-3xl bg-linear-to-b from-white/30 to-white/35 to-80% px-6 py-10 md:gap-20 md:px-20 md:py-16">
         {CERTIFICATIONS.map((c) => (
           <article key={c.title} className="flex flex-col gap-6">
-            <h3 className="font-body text-xl leading-normal font-bold text-heading">{c.title}</h3>
-            <div className="space-y-0 font-body text-base leading-loose font-medium tracking-[2px] text-muted md:text-xl">
+            <h3 className="font-body text-xl leading-normal font-bold text-heading md:text-base">{c.title}</h3>
+            <div className="space-y-0 font-body text-base leading-loose font-medium tracking-[2px] text-muted md:text-base">
               {c.paragraphs.map((p) => (
                 <p key={p}>{p}</p>
               ))}

@@ -46,7 +46,7 @@ function Skills() {
         {SKILLS.map((s) => (
           <span
             key={s}
-            className="tile px-[33px] py-4 text-center font-roboto text-base leading-loose font-bold tracking-[1px] whitespace-nowrap text-muted md:text-xl"
+            className="tile px-[33px] py-4 text-center font-roboto text-base leading-loose font-bold tracking-[1px] whitespace-nowrap text-muted md:text-base"
           >
             {s}
           </span>

@@ -7,7 +7,7 @@ export default function Works() {
     <>
       <section className="flex flex-col gap-6 pt-10 md:pt-16 xl:mx-auto xl:max-w-[1200px] xl:w-full xl:pt-[146px]">
         <BraceHeading as="h1">WORK</BraceHeading>
-        <p className="font-body text-base leading-loose font-medium tracking-[2px] text-muted md:text-xl">
+        <p className="font-body text-base leading-loose font-medium tracking-[2px] text-muted md:text-base">
           快來看看我的作品吧，我的Behance還有更多的作品 ~ !
         </p>
       </section>

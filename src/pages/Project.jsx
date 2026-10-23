@@ -26,7 +26,7 @@ function ProjectHeader({ project }) {
           href={BEHANCE_URL}
           target="_blank"
           rel="noreferrer"
-          className="flex items-center gap-2 font-tag text-xl font-bold text-accent hover:underline"
+          className="flex items-center gap-2 font-tag text-xl font-bold text-accent md:text-base hover:underline"
         >
           <img src={asset('icons/link.svg')} alt="" className="size-[18px]" />
           Behance Link
@@ -42,7 +42,7 @@ function ProjectInfo({ info }) {
       {info.map((row) => (
         <div key={row.label} className="flex flex-col gap-3 px-2 py-3">
           <dt className="font-display text-xl leading-[1.5] font-bold text-ink md:text-2xl">{row.label}</dt>
-          <dd className="font-body text-base leading-loose tracking-[2px] whitespace-pre-wrap text-muted md:text-xl">
+          <dd className="font-body text-base leading-loose tracking-[2px] whitespace-pre-wrap text-muted md:text-base">
             {row.lines.map((l) => (
               <span key={l} className="block">
                 {l}

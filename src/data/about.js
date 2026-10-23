@@ -62,11 +62,81 @@ export const EXPERIENCE = [
       },
     ],
   },
-  { company: '塶樂為創有限公司', role: 'UI / UX Designer', period: '2021 - 2025', logo: 'about/logo-tangle.png' },
-  { company: '誌彙科技有限公司', role: 'UI Designer', period: '2018 - 2021', logo: 'about/logo-zhihui.png' },
-  { company: '米洛科技有限公司', role: '網頁設計助理', period: '2017 - 2018', logo: 'about/logo-milo.png' },
-  { company: '卡貓科技有限公司 ( 結束營運 )', role: '梅樹設計兼企劃助理', period: '2016 - 2017', logoText: '貓' },
-  { company: '九玖雲端有限公司 ( 結束營運 )', role: '網頁美術設計', period: '2015 - 2016', logo: 'about/logo-jiujiu.png' },
+  {
+    company: '塶樂為創有限公司',
+    role: 'UI / UX Designer',
+    period: '2021 - 2025',
+    logo: 'about/logo-tangle.png',
+    details: [
+      {
+        heading: '主要工作內容',
+        points: [
+          '規劃網站平台與遊戲介面改版，改善資訊架構、分類導覽及使用流程。',
+          '設計 APP 視覺及交易體驗，透過 Prototype 溝通操作情境與優化方向。',
+          '與企劃、工程共同推進專案，兼顧品牌視覺、使用體驗與開發可行性。',
+        ],
+      },
+    ],
+  },
+  {
+    company: '誌彙科技有限公司',
+    role: 'UI Designer',
+    period: '2018 - 2021',
+    logo: 'about/logo-zhihui.png',
+    details: [
+      {
+        heading: '主要工作內容',
+        points: [
+          '負責網站與平台 UI 設計，包含品牌官網、活動頁及 RWD 介面規劃。',
+          '運用 HTML、CSS 與 jQuery 製作頁面互動，並維護 WordPress 網站。',
+          '與跨部門團隊合作，整合視覺設計與前端實作需求。',
+        ],
+      },
+    ],
+  },
+  {
+    company: '米洛科技有限公司',
+    role: '網頁設計助理',
+    period: '2017 - 2018',
+    logo: 'about/logo-milo.png',
+    details: [
+      {
+        heading: '主要工作內容',
+        points: [
+          '執行網頁版型與視覺設計，協助 RWD、跨瀏覽器樣式調整及版面問題排除。',
+          '參與企業識別、活動視覺與網站維護等設計任務。',
+        ],
+      },
+    ],
+  },
+  {
+    company: '卡貓科技有限公司 ( 結束營運 )',
+    role: '梅樹設計兼企劃助理',
+    period: '2016 - 2017',
+    logoText: '貓',
+    details: [
+      {
+        heading: '主要工作內容',
+        points: [
+          '設計卡牌類遊戲 UI、公司官網及視覺素材，並製作產品設計規格文件。',
+        ],
+      },
+    ],
+  },
+  {
+    company: '九玖雲端有限公司 ( 結束營運 )',
+    role: '網頁美術設計',
+    period: '2015 - 2016',
+    logo: 'about/logo-jiujiu.png',
+    details: [
+      {
+        heading: '主要工作內容',
+        points: [
+          '製作活動 Banner、EDM、GIF 與活動頁，並配合企劃及工程執行平台 UI 改版。',
+        ],
+      },
+    ],
+  },
 ]
 
 export const CERTIFICATIONS = [

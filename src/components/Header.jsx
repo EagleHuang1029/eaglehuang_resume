@@ -10,7 +10,7 @@ const links = [
 ]
 
 const navClass = ({ isActive }) =>
-  `text-xl font-black tracking-[0.4px] transition hover:text-accent ${isActive ? 'text-accent' : 'text-ink-strong dark:text-ink'}`
+  `text-xl md:text-base font-black tracking-[0.4px] transition hover:text-accent ${isActive ? 'text-accent' : 'text-ink-strong dark:text-ink'}`
 
 function ThemeToggle({ className = '' }) {
   const [theme, toggle] = useTheme()
@@ -40,7 +40,7 @@ export default function Header() {
             to="/"
             className="inline-flex items-center gap-2 rounded-full bg-button px-5 py-2.5 font-black tracking-[0.32px] text-white transition hover:opacity-90"
           >
-            <span aria-hidden className="text-xl leading-none">←</span>
+            <span aria-hidden className="text-xl leading-none md:text-base">←</span>
             回首頁
           </Link>
         </div>

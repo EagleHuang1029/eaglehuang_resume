@@ -17,7 +17,7 @@ export default function Footer() {
               TOGETHER
             </p>
           </div>
-          <p className="min-w-[284px] flex-1 font-roboto text-base leading-normal font-bold tracking-[1px] text-muted md:p-2.5 md:text-xl">
+          <p className="min-w-[284px] flex-1 font-roboto text-base leading-normal font-bold tracking-[1px] text-muted md:p-2.5 md:text-base">
             如果你對我的作品有興趣，
             <br />
             歡迎隨時聯繫我！
