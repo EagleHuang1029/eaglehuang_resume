@@ -43,7 +43,7 @@ function Hero() {
         </ul>
       </div>
 
-      <a href="#selected-works" className="hidden items-center gap-2 text-accent xl:flex">
+      <div className="hidden items-center gap-2 text-accent xl:flex">
         <img src={asset('home/feather-arrow.svg')} alt="" className="h-[108px] w-[72px]" />
         <span className="font-semibold">
           Scroll down
@@ -52,7 +52,7 @@ function Hero() {
           <br />
           selected works
         </span>
-      </a>
+      </div>
     </section>
   )
 }
