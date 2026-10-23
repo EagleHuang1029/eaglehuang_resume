@@ -10,7 +10,7 @@ const FOCUS = ['UI/UX Design', 'Product Thinking', 'Front-end Awareness', 'Proto
 
 function Hero() {
   return (
-    <section className="flex flex-wrap items-end justify-center gap-10 pt-10 md:pt-16 xl:flex-nowrap xl:justify-between xl:gap-12 xl:pt-[104px]">
+    <section className="flex flex-wrap items-end justify-center gap-10 pt-10 md:pt-16 xl:flex-nowrap xl:justify-between xl:gap-6 xl:pt-[104px]">
       <div className="flex w-full flex-col gap-8 xl:w-auto xl:gap-10">
         <h1 className="flex flex-col gap-4 text-ink xl:gap-6">
           <span className="flex items-center gap-4 xl:gap-6">
@@ -27,11 +27,11 @@ function Hero() {
         </h1>
 
         <p className="flex flex-col items-start gap-x-3 font-display text-[32px] leading-[1.3] font-extrabold text-ink md:flex-row md:items-center md:text-5xl xl:text-[56px]">
-          <span>簡單留給使用者</span>
+          <span className="whitespace-nowrap">簡單留給使用者</span>
           <span className="hidden rounded-full bg-chip md:order-none md:block md:p-4" aria-hidden>
             <img src={asset('icons/lamp.svg')} alt="" className="size-6 md:size-8" />
           </span>
-          <span>複雜留給思考</span>
+          <span className="whitespace-nowrap">複雜留給思考</span>
         </p>
 
         <ul className="flex flex-col gap-2 md:flex-row md:flex-wrap md:gap-10">
@@ -44,8 +44,8 @@ function Hero() {
       </div>
 
       <div className="hidden shrink-0 items-center gap-2 text-accent xl:flex">
-        <img src={asset('home/feather-arrow.svg')} alt="" className="h-[108px] w-[72px]" />
-        <span className="font-semibold">
+        <img src={asset('home/feather-arrow.svg')} alt="" className="h-[60px] w-10" />
+        <span className="text-xs font-semibold whitespace-nowrap">
           Scroll down
           <br />
           to see
