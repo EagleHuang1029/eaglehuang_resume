@@ -78,7 +78,7 @@ function Intro() {
       <img
         src={asset('home/portrait.webp')}
         alt="Eagle 的插畫頭像"
-        className="mx-auto w-[220px] md:w-[280px] xl:mx-0 xl:mt-[90px] xl:w-[336px] xl:self-start"
+        className="mx-auto w-[180px] md:w-[220px] xl:mx-0 xl:-mb-10 xl:w-[240px] xl:self-end"
       />
     </section>
   )
@@ -105,7 +105,7 @@ export default function Home() {
       <SelectedWorks />
       {/* The 關於我 block is wider (1840px) than the main column on desktop */}
       <section className="mt-16 xl:relative xl:left-1/2 xl:mt-[189px] xl:w-[min(1840px,calc(100vw-48px))] xl:-translate-x-1/2">
-        <BraceHeading className="mb-6 xl:mb-0 xl:p-2.5">關於我</BraceHeading>
+        <BraceHeading size="sm" className="mb-6 xl:mb-0 xl:p-2.5">關於我</BraceHeading>
         <AboutCards />
       </section>
     </>
