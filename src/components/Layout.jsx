@@ -23,7 +23,7 @@ export default function Layout() {
         style={{ backgroundImage: `url("${asset('bg-grain.png')}")` }}
       />
       <Header />
-      <main className="mx-auto w-full max-w-[1380px] px-4 md:px-8">
+      <main className="mx-auto w-full max-w-[1264px] px-4 md:px-8">
         <Outlet />
       </main>
       <Footer />
