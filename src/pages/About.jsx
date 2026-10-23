@@ -9,7 +9,7 @@ const iconButton = 'flex items-center justify-center gap-2.5 rounded-xl bg-butto
 
 function Intro() {
   return (
-    <section className="mt-10 flex flex-col gap-8 overflow-hidden rounded-3xl bg-linear-to-b from-white/15 to-white/0 to-80% px-6 py-10 md:px-12 md:py-14 xl:mt-[160px] xl:min-h-[785px] xl:pt-[84px] xl:pr-[60px] xl:pb-[157px] xl:pl-[88px]">
+    <section className="mt-10 flex flex-col gap-8 overflow-hidden rounded-3xl bg-linear-to-b from-white/30 to-white/15 to-80% px-6 py-10 md:px-12 md:py-14 xl:mt-[160px] xl:min-h-[785px] xl:pt-[84px] xl:pr-[60px] xl:pb-[157px] xl:pl-[88px]">
       <h1 className="font-display text-2xl leading-[1.5] font-extrabold text-ink md:text-[32px] xl:w-[1140px] xl:text-[40px]">
         {INTRO.headline}
       </h1>
@@ -108,7 +108,7 @@ function Certifications() {
   return (
     <section className="flex flex-col gap-6 py-16 xl:py-20">
       <h2 className="font-script text-4xl text-ink md:text-5xl">Certifications</h2>
-      <div className="flex flex-col gap-16 rounded-3xl bg-linear-to-b from-white/15 to-white/20 to-80% px-6 py-10 md:gap-20 md:px-20 md:py-16">
+      <div className="flex flex-col gap-16 rounded-3xl bg-linear-to-b from-white/30 to-white/35 to-80% px-6 py-10 md:gap-20 md:px-20 md:py-16">
         {CERTIFICATIONS.map((c) => (
           <article key={c.title} className="flex flex-col gap-6">
             <h3 className="font-body text-xl leading-normal font-bold text-heading">{c.title}</h3>

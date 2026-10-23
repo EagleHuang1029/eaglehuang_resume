@@ -12,8 +12,8 @@
   --color-accent: #2b9fd9;
   --color-button: #324d5c;
   --color-chip: rgb(79 155 214 / 0.3);
-  --color-panel: rgb(255 255 255 / 0.15);
-  --color-tile: rgb(255 255 255 / 0.5);
+  --color-panel: rgb(255 255 255 / 0.3);
+  --color-tile: rgb(255 255 255 / 0.65);
   --color-heading: #205777;
   --color-line: #b6c3c9;
   --color-ai: rgb(103 204 255 / 0.3);
@@ -67,9 +67,9 @@
   color-scheme: dark;
 }
 
-/* Aurora: wide ribbons of light sweeping slowly behind the page, under the paper grain.
-   Soft edges come from the gradients themselves (no blur filter), so each frame only
-   moves already-painted layers on the GPU. */
+/* Aurora: wide ribbons of light orbiting behind the page, under the paper grain.
+   Each band is painted small and scaled up, and only spins at a constant speed,
+   so the GPU just rotates a ready texture every frame (smooth, no pauses). */
 .aurora {
   position: fixed;
   inset: 0;
@@ -80,72 +80,63 @@
 
 .aurora span {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  width: 50vmax;
+  height: 34vmax;
   border-radius: 50%;
   will-change: transform;
-  animation: aurora-sweep 22s ease-in-out infinite alternate;
+  animation: aurora-orbit 18s linear infinite;
+  --s: 3.2;
 }
 
 /* A ring whose curved edge sweeps across the screen like a light band */
 .aurora span:nth-child(1) {
-  width: 170vmax;
-  height: 120vmax;
-  margin: -60vmax 0 0 -85vmax;
+  left: -10vmax;
+  top: 5vmax;
+  transform-origin: 70% 90%;
   background: radial-gradient(
     closest-side,
-    transparent 70%,
-    rgb(79 155 214 / 0.38) 78%,
-    rgb(43 159 217 / 0.22) 88%,
+    transparent 64%,
+    rgb(79 155 214 / 0.55) 74%,
+    rgb(43 159 217 / 0.32) 86%,
     transparent 100%
   );
-  --from: translate3d(-30vw, 25vh, 0) rotate(-20deg);
-  --to: translate3d(25vw, -20vh, 0) rotate(35deg);
 }
 
 .aurora span:nth-child(2) {
-  width: 140vmax;
-  height: 90vmax;
-  margin: -45vmax 0 0 -70vmax;
-  background: radial-gradient(
-    closest-side,
-    rgb(103 204 255 / 0.32) 0%,
-    rgb(103 204 255 / 0.18) 55%,
-    transparent 100%
-  );
-  animation-duration: 28s;
-  animation-delay: -10s;
-  --from: translate3d(35vw, -30vh, 0) rotate(15deg) scale(0.9);
-  --to: translate3d(-25vw, 20vh, 0) rotate(-25deg) scale(1.1);
+  right: -12vmax;
+  top: 20vmax;
+  transform-origin: 20% 30%;
+  background: radial-gradient(closest-side, rgb(103 204 255 / 0.45) 0%, rgb(103 204 255 / 0.22) 50%, transparent 100%);
+  animation-duration: 24s;
+  animation-direction: reverse;
+  --s: 2.6;
 }
 
 .aurora span:nth-child(3) {
-  width: 150vmax;
-  height: 100vmax;
-  margin: -50vmax 0 0 -75vmax;
+  left: 20vmax;
+  bottom: -8vmax;
+  transform-origin: 40% 10%;
   background: radial-gradient(
     closest-side,
-    transparent 62%,
-    rgb(145 128 240 / 0.24) 74%,
-    rgb(79 155 214 / 0.16) 86%,
+    transparent 56%,
+    rgb(145 128 240 / 0.38) 70%,
+    rgb(79 155 214 / 0.24) 84%,
     transparent 100%
   );
-  animation-duration: 34s;
-  animation-delay: -18s;
-  --from: translate3d(20vw, 35vh, 0) rotate(40deg);
-  --to: translate3d(-30vw, -25vh, 0) rotate(-10deg);
+  animation-duration: 30s;
+  --s: 3;
 }
 
 .dark .aurora span {
-  opacity: 0.55;
+  opacity: 0.5;
 }
 
-@keyframes aurora-sweep {
+@keyframes aurora-orbit {
   from {
-    transform: var(--from);
+    transform: rotate(0deg) scale(var(--s));
   }
   to {
-    transform: var(--to);
+    transform: rotate(360deg) scale(var(--s));
   }
 }
 
@@ -167,7 +158,7 @@
 @media (prefers-reduced-motion: reduce) {
   .aurora span {
     animation: none;
-    transform: var(--from);
+    transform: scale(var(--s));
   }
 
   .reveal {

@@ -5,7 +5,7 @@ Figma file `Cn8kunj18UdvHfitsibbuY` (page Resume_web) and save it at the path be
 
 | Path | Figma node | Notes |
 |---|---|---|
-| bg-noise.png | fill of 19:3 | 128px noise tile |
+| bg-grain.png | fill of 19:3 | 128px noise tile, converted to white/black grain with alpha so it needs no blend mode |
 | home/avatar.png | I138:54;136:15 | header avatar (raw image) |
 | home/portrait.png | 72:6 | export the mask group |
 | home/feather-arrow.svg | 64:2612 | |

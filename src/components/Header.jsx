@@ -34,7 +34,7 @@ export default function Header() {
   // Case-study pages use the slim Figma header: only a 回首頁 pill.
   if (pathname.startsWith('/projects/')) {
     return (
-      <header className="sticky top-0 z-30 border border-white/50 bg-white/20 backdrop-blur-md dark:border-white/10 dark:bg-black/20">
+      <header className="sticky top-0 z-30 border border-white/50 bg-white/35 backdrop-blur-md dark:border-white/10 dark:bg-black/20">
         <div className="mx-auto flex max-w-[1920px] items-center px-4 py-4 md:px-12 md:py-6">
           <Link
             to="/"
@@ -49,7 +49,7 @@ export default function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-30 border border-white/50 bg-white/20 backdrop-blur-md dark:border-white/10 dark:bg-black/20">
+    <header className="sticky top-0 z-30 border border-white/50 bg-white/35 backdrop-blur-md dark:border-white/10 dark:bg-black/20">
       <div className="mx-auto flex max-w-[1920px] items-center justify-between px-4 py-4 md:px-12 md:py-6">
         <Link to="/" className="flex items-center gap-4" onClick={() => setOpen(false)}>
           <img
@@ -86,13 +86,13 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav className="flex flex-col gap-5 px-4 pb-6 md:hidden">
+        <nav className="flex flex-col items-center gap-5 px-4 pb-6 text-center md:hidden">
           {links.map((l) => (
             <NavLink key={l.to} to={l.to} onClick={() => setOpen(false)} className={navClass}>
               {l.label}
             </NavLink>
           ))}
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap justify-center gap-3">
             <ThemeToggle />
             <ContactButton className="px-6 py-3" />
           </div>

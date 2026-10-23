@@ -16,11 +16,11 @@ export default function Layout() {
         <span />
         <span />
       </div>
-      {/* Paper-grain texture from the Figma background */}
+      {/* Paper-grain texture from the Figma background (no blend mode, so the moving aurora stays cheap to draw) */}
       <div
         aria-hidden
-        className="pointer-events-none fixed inset-0 -z-10 bg-size-[128px_128px] mix-blend-overlay"
-        style={{ backgroundImage: `url("${asset('bg-noise.png')}")` }}
+        className="pointer-events-none fixed inset-0 -z-10 bg-size-[128px_128px]"
+        style={{ backgroundImage: `url("${asset('bg-grain.png')}")` }}
       />
       <Header />
       <main className="mx-auto w-full max-w-[1380px] px-4 md:px-8">
