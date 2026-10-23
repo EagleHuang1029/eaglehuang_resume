@@ -98,7 +98,7 @@ export default function Project() {
           src={asset(project.hero)}
           alt={`${project.titleMuted}${project.title} 主視覺`}
           fetchPriority="high"
-          className="mt-8 w-full rounded-3xl xl:relative xl:left-1/2 xl:mt-8 xl:w-[min(1760px,calc(100vw-48px))] xl:max-w-none xl:-translate-x-1/2"
+          className="mt-8 w-full rounded-3xl"
         />
         <ProjectInfo info={project.info} />
       </div>

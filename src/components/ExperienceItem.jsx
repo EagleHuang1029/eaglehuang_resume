@@ -35,7 +35,7 @@ export default function ExperienceItem({ job, defaultOpen = false }) {
         <span className="font-body text-base font-medium text-muted/50 md:px-2 md:text-base">{job.period}</span>
       </span>
       {expandable && (
-        <span className="relative size-6 shrink-0 self-start md:mt-3.5 md:self-auto" aria-hidden>
+        <span className="relative size-6 shrink-0 self-start md:self-center" aria-hidden>
           <img
             src={asset('icons/more.svg')}
             alt=""
