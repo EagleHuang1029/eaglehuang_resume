@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+
+/* Design tokens taken from the Figma file (Eagle Resume). */
+@theme {
+  --color-page: #e7eff6;
+  --color-ink: #1f3442;
+  --color-muted: #6b7f8e;
+  --color-brand: #4f9bd6;
+  --color-brand-deep: #2b9fd9;
+  --color-card: #ffffffb3;
+
+  --font-sans: 'Noto Sans TC', system-ui, sans-serif;
+  --font-display: 'Bricolage Grotesque', 'Noto Sans TC', sans-serif;
+  --font-tag: 'Space Grotesk', 'Noto Sans TC', sans-serif;
+  --font-condensed: 'Roboto Condensed', 'Noto Sans TC', sans-serif;
+
+  /* Breakpoints matching the Figma frames: mobile 390 / tablet 810 / desktop 1920 */
+  --breakpoint-md: 48rem;
+  --breakpoint-xl: 80rem;
+}
+
+@layer base {
+  body {
+    @apply bg-page font-sans text-ink antialiased;
+  }
+}
