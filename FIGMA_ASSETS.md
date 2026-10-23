@@ -46,3 +46,13 @@ Figma file `Cn8kunj18UdvHfitsibbuY` (page Resume_web) and save it at the path be
 | about/cert-hexschool.png | 457:3695 | |
 
 `public/resume.pdf` is the 下載履歷 file; it is not in Figma and must be supplied.
+
+## 作品頁 (563:8342)
+
+| Path | Figma node | Notes |
+|---|---|---|
+| works/web.png | 564:8623 | export the gradient frame |
+| works/app.png | 564:8790 | export the gradient frame |
+| works/behance.png | 564:8924 | export the whole collage frame |
+| works/bubble.svg | 564:8886 | speech bubble shape only (text is live) |
+| works/mascot.png | 564:8884 | |
