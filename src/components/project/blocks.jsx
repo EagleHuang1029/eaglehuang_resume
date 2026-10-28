@@ -1,3 +1,4 @@
+import { asset } from '../../lib/asset.js'
 import { BlockTitle, Figure, IconTitle, Panel, SectionHeading, TextItem } from './parts.jsx'
 
 export function AboutProject({ about }) {
@@ -36,7 +37,7 @@ export function AboutProject({ about }) {
   )
 }
 
-function PanelBlock({ heading, icon, title, columns = [], full = [], large }) {
+function PanelBlock({ heading, icon, title, columns = [], full = [], large, largeTitle }) {
   return (
     <section className="flex flex-col gap-6">
       {heading && <SectionHeading>{heading}</SectionHeading>}
@@ -45,13 +46,13 @@ function PanelBlock({ heading, icon, title, columns = [], full = [], large }) {
         {columns.length > 0 && (
           <div className="grid gap-6 md:pl-10 xl:grid-cols-2 xl:gap-10">
             {columns.map((c) => (
-              <TextItem key={c.title} {...c} large={large} />
+              <TextItem key={c.title} {...c} large={large} largeTitle={largeTitle} />
             ))}
           </div>
         )}
         {full.map((c) => (
           <div key={c.title} className="md:pl-10">
-            <TextItem {...c} large={large} />
+            <TextItem {...c} large={large} largeTitle={largeTitle} />
           </div>
         ))}
       </Panel>
@@ -93,7 +94,7 @@ function StepsBlock({ title, items, figure }) {
       <div className="grid gap-6 xl:grid-cols-2 xl:gap-x-12">
         {items.map((it) => (
           <div key={it.title} className={it.wide ? 'xl:col-span-2' : ''}>
-            <TextItem {...it} titleClass="text-ink" />
+            <TextItem {...it} titleClass="text-xl text-heading md:text-2xl" />
           </div>
         ))}
       </div>
@@ -137,36 +138,19 @@ function GalleryBlock({ images }) {
   )
 }
 
-function FlowNode({ children }) {
-  return (
-    <span className="flex min-h-[72px] items-center justify-center rounded-2xl bg-white/65 px-6 py-3 text-center font-display text-lg font-bold text-ink shadow-[inset_2px_2px_4px_0_rgb(255_255_255/0.25)] md:min-h-[104px] md:text-2xl dark:bg-white/10">
-      {children}
-    </span>
-  )
-}
-
-function FlowArrow() {
-  return <span aria-hidden className="mx-auto h-10 w-px bg-ink/40 md:h-[80px]" />
-}
-
+// Before/after flow charts, exported from Figma with transparent backgrounds and dark text.
 function FlowBlock({ flows }) {
   return (
     <section className="grid gap-12 md:grid-cols-2">
-      {flows.map((flow) => (
-        <div key={flow.title} className="flex flex-col">
-          <h3 className="mb-8 text-center font-display text-2xl font-bold text-ink md:text-[32px]">{flow.title}</h3>
-          <div className="grid grid-cols-2 gap-2">
-            {flow.start.map((s) => (
-              <FlowNode key={s}>{s}</FlowNode>
-            ))}
-          </div>
-          {flow.steps.map((step) => (
-            <div key={step} className="flex flex-col">
-              <FlowArrow />
-              <FlowNode>{step}</FlowNode>
-            </div>
-          ))}
-        </div>
+      {flows.map((f) => (
+        <img
+          key={f.src}
+          src={asset(f.src)}
+          alt={f.alt}
+          className="w-full dark:rounded-3xl dark:bg-[#e7eff6] dark:p-6"
+          loading="lazy"
+          decoding="async"
+        />
       ))}
     </section>
   )
@@ -180,7 +164,7 @@ function StatsBlock({ icon, title, items }) {
         {items.map((s) => (
           <div key={s.label} className="flex flex-col-reverse gap-1 font-body">
             <dt className="text-base tracking-[2px] text-muted md:text-base">{s.label}</dt>
-            <dd className="font-display text-4xl font-extrabold text-accent md:text-5xl">{s.value}</dd>
+            <dd className="font-display text-[32px] font-extrabold text-accent md:text-[40px]">{s.value}</dd>
           </div>
         ))}
       </dl>

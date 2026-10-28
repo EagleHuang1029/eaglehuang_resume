@@ -10,7 +10,7 @@ import { asset } from '../lib/asset.js'
 function ProjectHeader({ project }) {
   return (
     <header className="flex flex-col gap-4 pt-10 md:pt-16 xl:gap-2 xl:pt-[106px]">
-      <h1 className="font-display text-[32px] leading-[1.5] font-extrabold text-ink md:text-5xl xl:text-[80px]">
+      <h1 className="font-display text-[32px] leading-[1.5] font-extrabold text-ink md:text-[44px] xl:text-[60px]">
         <span className="text-ink/40">{project.titleMuted}</span>
         {project.title}
       </h1>
