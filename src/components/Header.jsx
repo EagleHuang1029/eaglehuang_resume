@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router'
 import { asset } from '../lib/asset.js'
 import { useTheme } from '../lib/useTheme.js'
@@ -30,18 +30,24 @@ function ThemeToggle({ className = '' }) {
 export default function Header() {
   const [open, setOpen] = useState(false)
   const { pathname } = useLocation()
+  const isProject = pathname.startsWith('/projects/')
+  // Remember the last non-project page so 返回 skips any project-to-project hops.
+  const backTo = useRef('/')
+  useEffect(() => {
+    if (!isProject) backTo.current = pathname
+  }, [isProject, pathname])
 
-  // Case-study pages use the slim Figma header: only a 回首頁 pill.
-  if (pathname.startsWith('/projects/')) {
+  // Case-study pages use the slim Figma header: only a 返回 pill back to the page the visitor came from.
+  if (isProject) {
     return (
       <header className="sticky top-0 z-30 border border-white/50 bg-white/35 backdrop-blur-md dark:border-white/10 dark:bg-black/20">
         <div className="mx-auto flex max-w-[1920px] items-center px-4 py-4 md:px-12 md:py-6">
           <Link
-            to="/"
+            to={backTo.current}
             className="inline-flex items-center gap-2 rounded-full bg-button px-5 py-2.5 font-black tracking-[0.32px] text-white transition hover:opacity-90"
           >
             <span aria-hidden className="text-xl leading-none md:text-base">←</span>
-            回首頁
+            返回
           </Link>
         </div>
       </header>
