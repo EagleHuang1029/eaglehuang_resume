@@ -205,15 +205,31 @@ function FlowBlock({ flows }) {
   )
 }
 
-function StatsBlock({ icon, title, items }) {
+// A stat is either a single `value` or a `from` → `to` pair; the "before" side is drawn smaller and muted.
+function StatsBlock({ icon, title, note, items }) {
   return (
     <Panel className="gap-6 bg-[#f8fcff]/90 dark:bg-white/10">
-      <IconTitle icon={icon}>{title}</IconTitle>
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+        <IconTitle icon={icon}>{title}</IconTitle>
+        {note && (
+          <span className="rounded-full bg-accent/10 px-3 py-1 font-body text-sm font-medium tracking-[1px] text-accent md:text-base">
+            {note}
+          </span>
+        )}
+      </div>
       <dl className="grid grid-cols-2 gap-6 md:pl-10 xl:grid-cols-4">
         {items.map((s) => (
           <div key={s.label} className="flex flex-col-reverse gap-1 font-body">
             <dt className="text-base tracking-[2px] text-muted md:text-base">{s.label}</dt>
-            <dd className="font-display text-[32px] font-extrabold text-accent md:text-[40px]">{s.value}</dd>
+            <dd className="flex flex-wrap items-baseline gap-x-2 font-display font-extrabold text-accent">
+              {/* On phones the "before → " part sits on its own line so every pair breaks the same way. */}
+              {s.from && (
+                <span className="basis-full text-xl text-muted/70 md:basis-auto md:text-2xl">
+                  {s.from} <span aria-label="變為">→</span>
+                </span>
+              )}
+              <span className="text-[32px] md:text-[40px]">{s.to ?? s.value}</span>
+            </dd>
           </div>
         ))}
       </dl>

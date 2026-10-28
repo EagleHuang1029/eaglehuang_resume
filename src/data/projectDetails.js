@@ -289,12 +289,13 @@ export const PROJECT_DETAILS = {
       {
         type: 'stats',
         icon: 'solve',
-        title: '使用者優化後成長百分比',
+        title: '內部可用性測試結果',
+        note: '團隊內部 8 人測試',
         items: [
-          { value: '+ 15.1%', label: '平台使用平均時長' },
-          { value: '+ 20.6%', label: '新流程銀行交易量' },
-          { value: '+ 5.4%', label: '舊流程銀行交易量' },
-          { value: '+ 24.8%', label: '儲值交易量' },
+          { from: '4 步', to: '2 步', label: '儲值流程步驟數' },
+          { value: '-40%', label: '任務完成時間' },
+          { from: '75%', to: '100%', label: '任務完成率' },
+          { from: '62', to: '81', label: 'SUS 易用性分數' },
         ],
       },
     ],
