@@ -134,7 +134,7 @@ export const PROJECT_DETAILS = {
       {
         type: 'panel',
         heading: '改版及優化內部反饋',
-        large: true,
+        largeTitle: true,
         full: [
           {
             title: '視覺改改版優化及體驗',
@@ -248,8 +248,8 @@ export const PROJECT_DETAILS = {
       {
         type: 'flow',
         flows: [
-          { title: '原先流程', start: ['其他頁面', '首頁'], steps: ['個人中心', '交易流程'] },
-          { title: '新流程', start: ['其他頁面', '首頁'], steps: ['交易流程'] },
+          { src: 'p-web/flow-old.webp', alt: '原先流程：其他頁面 → 首頁 → 個人中心 → 交易流程' },
+          { src: 'p-web/flow-new.webp', alt: '新流程：其他頁面或首頁 → 直接進入交易流程' },
         ],
       },
       { type: 'figure', src: 'p-web/banner.webp', alt: '每個頁面右下角都會有懸浮交易按鈕' },
