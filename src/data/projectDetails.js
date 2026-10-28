@@ -204,11 +204,9 @@ export const PROJECT_DETAILS = {
         ],
       },
       {
-        type: 'gallery',
-        images: [
-          { src: 'p-web/style-before.webp', alt: '網站改版前（Before）' },
-          { src: 'p-web/style-after.webp', alt: '網站改版後（After）' },
-        ],
+        type: 'compare',
+        before: { src: 'p-web/style-before.webp', alt: '網站改版前（Before）' },
+        after: { src: 'p-web/style-after.webp', alt: '網站改版後（After）' },
       },
       {
         type: 'designSystem',
@@ -224,7 +222,7 @@ export const PROJECT_DETAILS = {
         heading: '解決 - 使用者中斷使用產品及提升交易量',
         icon: 'feather',
         title: '數據部門提供相關數據進行分析',
-        large: true,
+        largeTitle: true,
         columns: [
           {
             title: '1.分析洞察',
