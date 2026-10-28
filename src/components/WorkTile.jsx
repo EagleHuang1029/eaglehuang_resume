@@ -10,7 +10,7 @@ export function WorkTile({ to, href, thumb, alt, name, subtitle, period }) {
           <img src={asset(thumb)} alt={alt} className="aspect-[552/443] w-full object-cover" loading="lazy" decoding="async" />
         </span>
       </span>
-      <span className="flex flex-col gap-4 md:gap-6">
+      <span className="flex flex-col gap-4 px-4 md:gap-6 md:px-6">
         <span className="flex flex-col font-body leading-loose">
           <span className="text-xl font-bold text-heading md:text-2xl">{name}</span>
           <span className="text-base font-medium text-ink/40">{subtitle}</span>

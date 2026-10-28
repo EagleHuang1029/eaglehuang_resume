@@ -12,7 +12,7 @@ export default function Works() {
         </p>
       </section>
 
-      <section className="card mt-10 grid gap-10 px-4 py-8 md:grid-cols-2 md:gap-x-6 md:gap-y-[25px] md:px-9 md:py-10 xl:mt-14 xl:gap-x-[46px]">
+      <section className="card mt-10 grid gap-10 px-4 py-8 md:grid-cols-2 md:gap-x-6 md:gap-y-[25px] md:px-9 md:py-10 xl:mt-14 xl:gap-x-[46px] xl:gap-y-20">
         {PROJECTS.map((p) => (
           <WorkTile
             key={p.slug}
