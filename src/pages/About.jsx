@@ -14,8 +14,8 @@ function Intro() {
         {INTRO.headline}
       </h1>
 
-      <div className="flex flex-col-reverse gap-8 xl:flex-row xl:items-start xl:justify-between">
-        <div className="flex flex-col items-start gap-8 xl:w-[792px]">
+      <div className="flex flex-col-reverse gap-8 xl:flex-row xl:items-start xl:justify-between xl:gap-10">
+        <div className="flex flex-col items-start gap-8 xl:min-w-0 xl:flex-1">
           <div className="space-y-4 py-2 font-body text-base leading-loose font-medium tracking-[2px] text-muted md:text-base">
             {INTRO.paragraphs.map((p) => (
               <p key={p}>{p}</p>
@@ -38,7 +38,7 @@ function Intro() {
             <li>
               <a href={`mailto:${INTRO.email}`} className={iconButton}>
                 <img src={asset('icons/mail-outline.svg')} alt="" className="size-6" />
-                <span className="font-body text-base leading-loose font-medium tracking-[2px] text-[#e7eff6]">
+                <span className="font-body text-base leading-6 font-medium tracking-[1px] whitespace-nowrap text-[#e7eff6]">
                   {INTRO.email}
                 </span>
               </a>
@@ -58,7 +58,7 @@ function Intro() {
         <img
           src={asset('about/portrait.webp')}
           alt="Eagle 的照片"
-          className="mx-auto w-[220px] md:w-[300px] xl:mx-0 xl:w-[376px]"
+          className="mx-auto w-[200px] md:w-[260px] xl:mx-0 xl:w-[300px] xl:shrink-0"
         />
       </div>
     </section>
