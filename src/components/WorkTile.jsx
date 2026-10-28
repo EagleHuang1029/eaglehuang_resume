@@ -12,8 +12,8 @@ export function WorkTile({ to, href, thumb, alt, name, subtitle, period }) {
       </span>
       <span className="flex flex-col gap-4 md:gap-6">
         <span className="flex flex-col font-body leading-loose">
-          <span className="text-2xl font-bold text-heading md:text-[32px]">{name}</span>
-          <span className="text-xl font-medium text-ink/40 md:text-2xl">{subtitle}</span>
+          <span className="text-xl font-bold text-heading md:text-2xl">{name}</span>
+          <span className="text-base font-medium text-ink/40">{subtitle}</span>
         </span>
         {period && <span className="text-base font-medium tracking-[0.32px] text-muted/50">{period}</span>}
       </span>
@@ -37,7 +37,7 @@ export function MascotBubble({ className = '' }) {
     <div className={`flex-col items-center justify-end ${className}`}>
       <div className="relative flex w-[230px] flex-col items-center pb-[24px] md:w-[300px] md:pb-[30px] xl:w-[398px]">
         <img src={asset('works/bubble.svg')} alt="" className="absolute inset-x-0 top-0 w-full" />
-        <p className="relative py-4 text-center font-roboto text-sm leading-normal md:py-6 md:text-base font-bold tracking-[1.37px] text-[#5a646a] xl:py-8 xl:text-[27px]">
+        <p className="relative py-4 text-center font-roboto text-sm leading-normal md:py-6 md:text-base font-bold tracking-[1.37px] text-[#5a646a] xl:py-8 xl:text-xl">
           如果你對我的作品有興趣
           <br />
           歡迎隨時聯繫我！
