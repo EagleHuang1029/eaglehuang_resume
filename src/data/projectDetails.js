@@ -273,7 +273,7 @@ export const PROJECT_DETAILS = {
         heading: '改版及優化成效',
         icon: 'feather',
         title: '視覺改版反饋',
-        large: true,
+        largeTitle: true,
         full: [
           {
             title: '1.視覺改版、資訊架構優化及體驗',
