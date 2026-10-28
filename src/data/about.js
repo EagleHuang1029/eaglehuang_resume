@@ -38,7 +38,7 @@ export const AI_DESIGN = {
 export const EXPERIENCE = [
   {
     company: '大真有限公司',
-    role: 'UI / UX 設計師 · 組長',
+    role: 'UI / UX 設計師',
     period: '2025 - 現在',
     logo: 'about/logo-dazhen.png',
     details: [
@@ -52,7 +52,7 @@ export const EXPERIENCE = [
         ],
       },
       {
-        heading: '小組長工作項目',
+        heading: '教學與流程制定',
         points: [
           '製作Figma教學文件，並指導組員有效運用Figma功能及AI工具。',
           '制定設計流程，讓原本混亂且難以延續跟維護的設計專案內容得到改善。',
