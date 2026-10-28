@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { asset } from '../../lib/asset.js'
 import { BlockTitle, Figure, IconTitle, Panel, SectionHeading, TextItem } from './parts.jsx'
 
@@ -80,7 +81,9 @@ function FeatureBlock({ title, items, figures, reverse }) {
     </div>
   )
   return (
-    <section className={`flex flex-col gap-10 xl:items-center xl:gap-[60px] ${reverse ? 'xl:flex-row-reverse' : 'xl:flex-row'}`}>
+    <section
+      className={`flex flex-col gap-10 xl:items-center xl:gap-[60px] ${reverse ? 'xl:flex-row-reverse' : 'xl:flex-row'}`}
+    >
       {text}
       {figs}
     </section>
@@ -128,12 +131,58 @@ function FigureBlock({ title, src, alt }) {
   )
 }
 
-function GalleryBlock({ images }) {
+// Before/after mockups stacked on top of each other; dragging the handle reveals more of either side.
+function CompareBlock({ before, after }) {
+  const [pos, setPos] = useState(50)
+  const label =
+    'pointer-events-none absolute top-2 font-display text-xl font-bold text-heading transition-opacity md:top-4 md:text-4xl'
   return (
-    <section className="grid gap-6 md:grid-cols-2">
-      {images.map((img) => (
-        <Figure key={img.src} {...img} />
-      ))}
+    // One wrapper so the scroll reveal animates the stack as a whole, not each layer.
+    <section>
+      <div className="relative select-none">
+        <img
+          src={asset(after.src)}
+          alt={after.alt}
+          className="block w-full"
+          draggable={false}
+          loading="lazy"
+          decoding="async"
+        />
+        <img
+          src={asset(before.src)}
+          alt={before.alt}
+          className="absolute inset-0 size-full"
+          style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
+          draggable={false}
+          loading="lazy"
+          decoding="async"
+        />
+        <span aria-hidden className={`${label} left-[4%]`} style={{ opacity: pos < 18 ? 0 : 1 }}>
+          Before
+        </span>
+        <span aria-hidden className={`${label} right-[4%]`} style={{ opacity: pos > 82 ? 0 : 1 }}>
+          After
+        </span>
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-y-0 w-0.5 -translate-x-1/2 bg-button"
+          style={{ left: `${pos}%` }}
+        >
+          <span className="absolute top-1/2 left-1/2 grid size-10 -translate-1/2 place-items-center rounded-full bg-button text-lg text-white shadow-lg md:size-12">
+            ⇔
+          </span>
+        </div>
+        <input
+          type="range"
+          min="0"
+          max="100"
+          step="0.5"
+          value={pos}
+          onChange={(e) => setPos(Number(e.target.value))}
+          aria-label="拖曳比較改版前（左）與改版後（右）"
+          className="absolute inset-0 size-full cursor-ew-resize touch-pan-y opacity-0"
+        />
+      </div>
     </section>
   )
 }
@@ -178,7 +227,7 @@ const BLOCKS = {
   steps: StepsBlock,
   designSystem: DesignSystemBlock,
   figure: FigureBlock,
-  gallery: GalleryBlock,
+  compare: CompareBlock,
   flow: FlowBlock,
   stats: StatsBlock,
 }
