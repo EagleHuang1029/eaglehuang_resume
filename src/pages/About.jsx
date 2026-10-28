@@ -10,12 +10,12 @@ const iconButton = 'flex items-center justify-center gap-2.5 rounded-xl bg-butto
 function Intro() {
   return (
     <section className="mt-10 flex flex-col gap-8 overflow-hidden glass rounded-3xl bg-white/20 px-6 py-10 md:px-12 md:py-14 xl:mt-[160px] xl:min-h-[785px] xl:pt-[84px] xl:pr-[60px] xl:pb-[157px] xl:pl-[88px]">
-      <h1 className="font-display text-2xl leading-[1.5] font-extrabold text-ink md:text-[32px] xl:max-w-[1140px] xl:text-[40px]">
+      <h1 className="font-display text-2xl leading-[1.5] font-extrabold text-ink md:text-[32px] xl:max-w-[1140px] xl:text-[32px]">
         {INTRO.headline}
       </h1>
 
       <div className="flex flex-col-reverse gap-8 xl:flex-row xl:items-start xl:justify-between">
-        <div className="flex flex-col items-start gap-6 xl:w-[792px]">
+        <div className="flex flex-col items-start gap-8 xl:w-[792px]">
           <div className="space-y-4 py-2 font-body text-base leading-loose font-medium tracking-[2px] text-muted md:text-base">
             {INTRO.paragraphs.map((p) => (
               <p key={p}>{p}</p>
