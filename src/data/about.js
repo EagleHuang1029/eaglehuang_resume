@@ -130,7 +130,7 @@ export const EXPERIENCE = [
   },
   {
     company: '卡貓科技有限公司 ( 結束營運 )',
-    role: '梅樹設計兼企劃助理',
+    role: 'UI設計兼企劃助理',
     period: '2016 - 2017',
     logoText: '貓',
     details: [
